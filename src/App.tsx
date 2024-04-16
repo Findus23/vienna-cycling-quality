@@ -22,7 +22,7 @@ function App() {
         <>
             <CqiMap maxBounds={viennabbox as LngLatBoundsLike} minZoom={minZoom}/>
             <div className="absolute bottom-3 left-3 rounded bg-white/80 px-1 py-0.5 text-xs">
-                Datenstand: 24.03.2024
+                Datenstand: 15.04.2024
             </div>
 
         </>
