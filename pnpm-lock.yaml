@@ -12,11 +12,11 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@nanostores/react':
-        specifier: ^0.7.3
-        version: 0.7.3(nanostores@0.10.2)(react@19.0.0)
+        specifier: ^0.8.4
+        version: 0.8.4(nanostores@0.10.2)(react@19.0.0)
       '@nanostores/router':
-        specifier: ^0.14.2
-        version: 0.14.2(nanostores@0.10.2)
+        specifier: ^0.16.1
+        version: 0.16.1(nanostores@0.10.2)
       '@turf/turf':
         specifier: ^7.2.0
         version: 7.2.0
@@ -58,11 +58,11 @@ importers:
         specifier: ^0.5.16
         version: 0.5.16(tailwindcss@3.4.17)
       '@types/react':
-        specifier: ^18.3.18
-        version: 18.3.18
+        specifier: ^19.0.10
+        version: 19.0.10
       '@types/react-dom':
-        specifier: ^18.3.5
-        version: 18.3.5(@types/react@18.3.18)
+        specifier: ^19.0.4
+        version: 19.0.4(@types/react@19.0.10)
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.26.1
         version: 8.26.1(@typescript-eslint/parser@8.26.1(eslint@9.22.0(jiti@1.21.7))(typescript@5.8.2))(eslint@9.22.0(jiti@1.21.7))(typescript@5.8.2)
@@ -488,18 +488,18 @@ packages:
     resolution: {integrity: sha512-R6/ihEuC5KRexmKIYkWqUv84Gm+/QwsOUgHyt1yy2XqCdGdLvlBWVWIIeTZWN4NGdwmY6xDzdSGU2R9oBLNg2w==}
     hasBin: true
 
-  '@nanostores/react@0.7.3':
-    resolution: {integrity: sha512-/XuLAMENRu/Q71biW4AZ4qmU070vkZgiQ28gaTSNRPm2SZF5zGAR81zPE1MaMB4SeOp6ZTst92NBaG75XSspNg==}
+  '@nanostores/react@0.8.4':
+    resolution: {integrity: sha512-EciHSzDXg7GmGODjegGG1VldPEinbAK+12/Uz5+MAdHmxf082Rl6eXqKFxAAu4pZAcr5dNTpv6wMfEe7XacjkQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       nanostores: ^0.9.0 || ^0.10.0 || ^0.11.0
       react: '>=18.0.0'
 
-  '@nanostores/router@0.14.2':
-    resolution: {integrity: sha512-ksqDDmNXnEzvl2Su3zbLTJYMbYXaZWWPp4q2f3hTxiT4A2Bhu7/oMoOnydUHrufx5shs5u1qxq1Gu8kH2Mg3fA==}
+  '@nanostores/router@0.16.1':
+    resolution: {integrity: sha512-An3REnN66g8jRA6Y4Lio5zj2vW7REqlqN+m1cgCTGFtV1EA0g80V2PmgH94KO/h14gPa1/AiU+6r0s+e9kBzPA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
-      nanostores: ^0.9.0 || ^0.10.0
+      nanostores: ^0.9.0 || ^0.10.0 || ^0.11.0
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -1052,16 +1052,13 @@ packages:
   '@types/pbf@3.0.5':
     resolution: {integrity: sha512-j3pOPiEcWZ34R6a6mN07mUkM4o4Lwf6hPNt8eilOeZhTFbxFXmKhvXl9Y28jotFPaI1bpPDJsbCprUoNke6OrA==}
 
-  '@types/prop-types@15.7.14':
-    resolution: {integrity: sha512-gNMvNH49DJ7OJYv+KAKn0Xp45p8PLl6zo2YnvDIbTd4J6MER2BmWN49TG7n9LvkyihINxeKW8+3bfS2yDC9dzQ==}
-
-  '@types/react-dom@18.3.5':
-    resolution: {integrity: sha512-P4t6saawp+b/dFrUr2cvkVsfvPguwsxtH6dNIYRllMsefqFzkZk5UIjzyDOv5g1dXIPdG4Sp1yCR4Z6RCUsG/Q==}
+  '@types/react-dom@19.0.4':
+    resolution: {integrity: sha512-4fSQ8vWFkg+TGhePfUzVmat3eC14TXYSsiiDSLI0dVLsrm9gZFABjPy/Qu6TKgl1tq1Bu1yDsuQgY3A3DOjCcg==}
     peerDependencies:
-      '@types/react': ^18.0.0
+      '@types/react': ^19.0.0
 
-  '@types/react@18.3.18':
-    resolution: {integrity: sha512-t4yC+vtgnkYjNSKlFx1jkAhH8LgTo2N/7Qvi83kdEaUtMDiwpbLAktKDaAMlRcJ5eSxZkH74eEGt1ky31d7kfQ==}
+  '@types/react@19.0.10':
+    resolution: {integrity: sha512-JuRQ9KXLEjaUNjTWpzuR231Z2WpIwczOkBEIvbHNCzQefFIT0L8IqE6NV6ULLyC1SI/i234JnDoMkfg+RjQj2g==}
 
   '@types/supercluster@7.1.3':
     resolution: {integrity: sha512-Z0pOY34GDFl3Q6hUFYf3HkTwKEE02e7QgtJppBt+beEAxnyOpJua+voGFvxINBHa06GwLFFym7gRPY2SiKIfIA==}
@@ -2556,12 +2553,12 @@ snapshots:
       rw: 1.3.3
       tinyqueue: 3.0.0
 
-  '@nanostores/react@0.7.3(nanostores@0.10.2)(react@19.0.0)':
+  '@nanostores/react@0.8.4(nanostores@0.10.2)(react@19.0.0)':
     dependencies:
       nanostores: 0.10.2
       react: 19.0.0
 
-  '@nanostores/router@0.14.2(nanostores@0.10.2)':
+  '@nanostores/router@0.16.1(nanostores@0.10.2)':
     dependencies:
       nanostores: 0.10.2
 
@@ -3864,15 +3861,12 @@ snapshots:
 
   '@types/pbf@3.0.5': {}
 
-  '@types/prop-types@15.7.14': {}
-
-  '@types/react-dom@18.3.5(@types/react@18.3.18)':
+  '@types/react-dom@19.0.4(@types/react@19.0.10)':
     dependencies:
-      '@types/react': 18.3.18
+      '@types/react': 19.0.10
 
-  '@types/react@18.3.18':
+  '@types/react@19.0.10':
     dependencies:
-      '@types/prop-types': 15.7.14
       csstype: 3.1.3
 
   '@types/supercluster@7.1.3':
