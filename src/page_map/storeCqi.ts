@@ -9,6 +9,7 @@ export const validAnzeigeValues = [
 export type CqiMapSearchparams = BaseMapSearchparams & {
   mode: (typeof validAnzeigeValues)[number]
   filters?: string
+  date?: string
 }
 
 type Props = {

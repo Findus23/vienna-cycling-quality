@@ -5,7 +5,18 @@ import { Layer, Source } from 'react-map-gl/maplibre'
 import { wrapFilterWithAll } from '../BaseMap/utils/wrapFilterWithAll'
 import { layerByGroups, layersSelected, legendByGroups } from './layers/layers'
 import { filterParamsObject, type CqiMapSearchparams } from './storeCqi'
-import {default as dataTiles}  from "../assets/data.pmtiles";
+import {default as dataTiles2024}  from "../assets/2024-04-15.pmtiles";
+import {default as dataTiles2025}  from "../assets/2025-03-11.pmtiles";
+
+function pmFileFromDate(date: string | undefined) {
+    switch (date) {
+        case "2024":
+            return dataTiles2024;
+        default:
+            return dataTiles2025;
+    }
+}
+
 export const MapSourceCqi = () => {
   const params = useStore($searchParams) as CqiMapSearchparams
   const mapData = useStore($clickedMapData)
@@ -15,7 +26,7 @@ export const MapSourceCqi = () => {
   // console.log(mapDataIds)
   // const map = useMap()
   // console.log(map.current?.getStyle())
-  const pmtilesUrl = "pmtiles://" + dataTiles
+  const pmtilesUrl = "pmtiles://" + pmFileFromDate(params.date)
 
   const userFilterGroups: {
     [group: string]: ['in', string, ...(string | number)[]][]
