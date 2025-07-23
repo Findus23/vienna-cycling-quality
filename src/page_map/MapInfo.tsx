@@ -51,7 +51,7 @@ export const MapInfo = () => {
                 <p>
                     Über mich: <a href="https://lw1.at">lw1.at</a>
                 </p>
-                <p>Downloads:</p>
+                <p>Downloads (<a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>):</p>
                 <ul className="list-inside list-disc mb-4">
                     <li><a href={dataTiles2024}>2024-04-15.pmtiles</a></li>
                     <li><a href={dataTiles202503}>2025-03-11.pmtiles</a></li>
