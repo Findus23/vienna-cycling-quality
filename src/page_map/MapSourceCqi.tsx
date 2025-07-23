@@ -6,12 +6,15 @@ import { wrapFilterWithAll } from '../BaseMap/utils/wrapFilterWithAll'
 import { layerByGroups, layersSelected, legendByGroups } from './layers/layers'
 import { filterParamsObject, type CqiMapSearchparams } from './storeCqi'
 import {default as dataTiles2024}  from "../assets/2024-04-15.pmtiles";
-import {default as dataTiles2025}  from "../assets/2025-03-11.pmtiles";
+import {default as dataTiles202503}  from "../assets/2025-03-11.pmtiles";
+import {default as dataTiles2025}  from "../assets/2025-07-23.pmtiles";
 
 function pmFileFromDate(date: string | undefined) {
     switch (date) {
         case "2024":
             return dataTiles2024;
+        case "2025-03":
+            return dataTiles202503;
         default:
             return dataTiles2025;
     }

@@ -1,4 +1,8 @@
 import {useState} from "react";
+import {default as dataTiles2024}  from "../assets/2024-04-15.pmtiles";
+import {default as dataTiles202503}  from "../assets/2025-03-11.pmtiles";
+import {default as dataTiles2025}  from "../assets/2025-07-23.pmtiles";
+import {default as dataTiles2025json}  from "../assets/2025-07-23.json?url";
 
 export const MapInfo = () => {
     // const clickedMapData = useStore($clickedMapData)
@@ -47,6 +51,13 @@ export const MapInfo = () => {
                 <p>
                     Über mich: <a href="https://lw1.at">lw1.at</a>
                 </p>
+                <p>Downloads:</p>
+                <ul className="list-inside list-disc mb-4">
+                    <li><a href={dataTiles2024}>2024-04-15.pmtiles</a></li>
+                    <li><a href={dataTiles202503}>2025-03-11.pmtiles</a></li>
+                    <li><a href={dataTiles2025}>2025-07-23.pmtiles</a></li>
+                    <li><a href={dataTiles2025json}>2025-07-23.json</a></li>
+                </ul>
                 <p>
                     Impressum: <a href="https://lw1.at/de/impressum/">lw1.at/de/impressum</a>
                 </p>

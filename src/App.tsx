@@ -9,8 +9,10 @@ function dateToDatenstand(date:string|undefined){
     switch(date){
         case "2024":
             return "15.04.2024"
-        default:
+        case "2025-03":
             return "11.03.2025"
+        default:
+            return "23.07.2025"
     }
 }
 

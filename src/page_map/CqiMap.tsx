@@ -1,4 +1,4 @@
-import { BaseMap, type MapInitialViewState } from '../BaseMap/BaseMap'
+import { type MapInitialViewState } from '../BaseMap/BaseMap'
 import { $searchParams } from '../BaseMap/store'
 import { useStore } from '@nanostores/react'
 import 'maplibre-gl/dist/maplibre-gl.css'
@@ -15,6 +15,10 @@ import {
     type CqiMapSearchparams,
 } from './storeCqi'
 import {MapInfo} from "./MapInfo.tsx";
+import { Suspense, lazy } from 'react'
+
+const BaseMap = lazy(()=>
+import("../BaseMap/BaseMap").then(mod=>({default:mod.BaseMap})))
 
 type Props = {
     maxBounds: MapInitialViewState['maxBounds']
@@ -54,24 +58,26 @@ export const CqiMap = ({ maxBounds, minZoom, maxZoom }: Props) => {
     }, [params, legendByGroups])
 
     return (
-        <BaseMap
-            initialViewState={{
-                longitude: 16.37027,
-                latitude: 48.20974,
-                zoom: 11,
-                // Only pass the props if they are implicitly present
-                // Needed to get rid of Astro's strict TS settings https://www.typescriptlang.org/tsconfig#exactOptionalPropertyTypes
-                ...(maxBounds ? { maxBounds } : {}),
-                ...(minZoom ? { minZoom } : {}),
-                ...(maxZoom ? { maxZoom } : {}),
-            }}
-            interactiveLayerIds={interactiveLayerIdsByGroup[params?.mode] || []}
-        >
-            <MapSourceCqi />
-            <NavigationControl showCompass={false} position="top-right" />
-            <MapInspector />
-            <MapInfo />
-            <Overlay />
-        </BaseMap>
-    )
+        <><Suspense fallback={<div>Loading the map…</div>}>
+            <BaseMap
+                initialViewState={{
+                    longitude: 16.37027,
+                    latitude: 48.20974,
+                    zoom: 11,
+                    // Only pass the props if they are implicitly present
+                    // Needed to get rid of Astro's strict TS settings https://www.typescriptlang.org/tsconfig#exactOptionalPropertyTypes
+                    ...(maxBounds ? {maxBounds} : {}),
+                    ...(minZoom ? {minZoom} : {}),
+                    ...(maxZoom ? {maxZoom} : {}),
+                }}
+                interactiveLayerIds={interactiveLayerIdsByGroup[params?.mode] || []}
+            >
+                <MapSourceCqi/>
+                <NavigationControl showCompass={false} position="top-right"/>
+                <MapInspector/>
+                <Overlay/>
+            </BaseMap>
+        </Suspense><MapInfo/></>
+
+)
 }
