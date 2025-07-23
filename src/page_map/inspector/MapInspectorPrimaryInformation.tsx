@@ -25,7 +25,7 @@ export const MapInspectorPrimaryInformation = ({ properties }: Props) => {
 
     return (
       <div
-        className="my-2 flex items-center justify-center gap-1 rounded py-2 text-gray-950"
+        className="my-2 flex items-center justify-center gap-1 rounded-sm py-2 text-gray-950"
         style={{ backgroundColor: color }}
       >
         {properties.index != 1 && <>1…</>}
